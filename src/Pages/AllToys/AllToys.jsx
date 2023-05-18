@@ -4,7 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import useTitle from "../../Hooks/useTitle";
 const AllToys = () => {
+  useTitle("Login");
   return (
     <div>
       <Card className="mt-20 py-6" sx={{ maxWidth: 345 }}>

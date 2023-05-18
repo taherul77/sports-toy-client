@@ -4,8 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import useTitle from "../../Hooks/useTitle";
 
 const Register = () => {
+  useTitle("Login");
   const { signUp } = useContext(AuthContext);
   const [error, setError] = useState("");
 
