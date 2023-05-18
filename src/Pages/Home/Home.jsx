@@ -16,7 +16,7 @@ const Home = () => {
       <div>
         <div>
           <h2 className="text-2xl font-semibold text-center  capitalize lg:text-3xl py-6 ">
-            OUR RECIPE
+            OUR TOY Gallery
           </h2>
         </div>
         <Gallery></Gallery>

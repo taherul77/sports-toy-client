@@ -5,10 +5,11 @@ import CategoryCardComponent from "../CategoryCardComponent/CategoryCardComponen
 const Category = () => {
   return (
     <div>
-      <Tabs forceRenderTabPanel defaultIndex={1}>
+      <Tabs forceRenderTabPanel defaultIndex={0}>
         <TabList className={"flex gap-20"}>
           <Tab>The Simpsons</Tab>
           <Tab>Futurama</Tab>
+          <Tab>Futuramarrr</Tab>
         </TabList>
         <TabPanel>
           <Tabs forceRenderTabPanel>
@@ -58,6 +59,36 @@ const Category = () => {
             </TabPanel>
             <TabPanel>
               <CategoryCardComponent></CategoryCardComponent>
+              <CategoryCardComponent></CategoryCardComponent>
+            </TabPanel>
+            <TabPanel>
+              <CategoryCardComponent></CategoryCardComponent>
+            </TabPanel>
+            <TabPanel>
+              <CategoryCardComponent></CategoryCardComponent>
+            </TabPanel>
+            <TabPanel>
+              <CategoryCardComponent></CategoryCardComponent>
+            </TabPanel>
+          </Tabs>
+        </TabPanel>
+        <TabPanel>
+          <Tabs forceRenderTabPanel>
+            <TabList className={"flex gap-20"}>
+              <Tab>Homer Simpson</Tab>
+              <Tab>Marge Simpson</Tab>
+              <Tab>Bart Simpson</Tab>
+              <Tab>Lisa Simpson</Tab>
+              <Tab>Maggie Simpson</Tab>
+            </TabList>
+            <TabPanel>
+              <div className="flex gap-10 py-4">
+              <CategoryCardComponent></CategoryCardComponent>
+              <CategoryCardComponent></CategoryCardComponent>
+              </div>
+              
+            </TabPanel>
+            <TabPanel>
               <CategoryCardComponent></CategoryCardComponent>
             </TabPanel>
             <TabPanel>
