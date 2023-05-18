@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import { CgClose } from "react-icons/cg";
 import { VscThreeBars } from "react-icons/vsc";
 
-
-
-
-
-
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
   const menus = [
@@ -26,12 +21,6 @@ const Header = () => {
           />
         </Link>
         <div className="flex items-center">
-          <div className="relative mr-14 md:hidden">
-            <small className="absolute top-[-10px] right-[-10px] bg-primary text-white rounded-full text-xs p-1 pl-[5px] w-5 h-5 flex justify-center items-center">
-              0
-            </small>
-          
-          </div>
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
@@ -64,10 +53,6 @@ const Header = () => {
               </li>
             ))}
             <button className="rounded-full">Log In</button>
-
-
-
-
           </div>
         </ul>
       </div>
