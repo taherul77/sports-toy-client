@@ -9,8 +9,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import useTitle from "../../Hooks/useTitle";
 
 const Login = () => {
+    useTitle("Login");
     const { signIn,logInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate();
