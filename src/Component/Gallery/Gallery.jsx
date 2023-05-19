@@ -56,6 +56,7 @@ const itemData = [
   ];
 
 const Gallery = () => {
+  
   return (
     <ImageList >
     

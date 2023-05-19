@@ -6,7 +6,6 @@ import Gallery from "../../Component/Gallery/Gallery";
 
 const Home = () => {
 
- 
   return (
     <div>
       <div className="">
