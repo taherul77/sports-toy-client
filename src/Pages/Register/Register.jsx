@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import useTitle from "../../Hooks/useTitle";
 
 const Register = () => {
-  useTitle("Login");
+  useTitle("Register");
   const { signUp } = useContext(AuthContext);
   const [error, setError] = useState("");
 

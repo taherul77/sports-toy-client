@@ -3,7 +3,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useEffect, useState } from "react";
 
 const AllToys = () => {
-  useTitle("Login");
+  useTitle("All Toys");
 
   // Search
   const [searchTerm, setSearchTerm] = useState('');

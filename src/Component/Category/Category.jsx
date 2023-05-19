@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Category = () => {
     const [activeCategories, setActiveCategories] = useState("Football");
@@ -67,12 +68,22 @@ const Category = () => {
                                     Rating: {toy.toy_rating}
                                 </p>
                             </div>
+
+                            <Link to={`/single_toy/${toy._id}`}>
+                                {
+                                    console.log(toy._id)
+                                }
                             <button
+
+
                                 type="button"
                                 className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900"
                             >
                                 View Toy Details
                             </button>
+                            
+                            </Link>
+                           
                         </div>
                     </div>
                 ))}
