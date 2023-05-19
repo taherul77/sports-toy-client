@@ -15,22 +15,18 @@ const images = [
   {
     
     imgPath:
-      'https://i.ibb.co/j35FCVG/Vegetarian-chilli-206c469.webp',
+      'https://i.ibb.co/JzwqcDS/Toys-Banner.jpg',
   },
   {
    
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7',
+      'https://i.ibb.co/tq7jWmT/Web-banner-6-715x320.png',
   },
-  {
-   
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4',
-  },
+
   {
     
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8',
+      'https://i.ibb.co/myxFKyn/preschool-sports.jpg',
   },
 ];
 

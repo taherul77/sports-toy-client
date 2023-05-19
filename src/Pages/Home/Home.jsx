@@ -25,6 +25,7 @@ const Home = () => {
       <h2 className="text-2xl font-semibold text-center  capitalize lg:text-3xl py-6 ">
             Browse Our Category
           </h2>
+          
         <Category></Category>
 
       </div>
