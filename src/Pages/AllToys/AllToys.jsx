@@ -36,12 +36,13 @@ const AllToys = () => {
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
-        setFilteredToys(data); // Initialize filtered toys with all toys
+        setFilteredToys(data);
       });
   }, []);
 
   return (
     <div>
+
       <div className="mt-40 py-6">
         <input
           type="text"
@@ -49,13 +50,13 @@ const AllToys = () => {
           value={searchTerm}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          className="w-full py-2 pl-10 pr-4 bg-gray-300 border  text-gray-700 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+          className="w-full py-2 pl-10 pr-4  border   dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
         />
       </div>
 
       <div className="overflow-x-auto w-full  bg-gray-300">
         <table className="table w-full">
-          {/* head */}
+         
           <thead className="bg-gray-500 h-10">
             <tr>
               <th>Seller</th>
@@ -76,8 +77,8 @@ const AllToys = () => {
                       </div>
                     </div>
                     <div className="m-6">
-                      <div className="">Name</div>
-                      <div className="">Email</div>
+                      <div className="">{toy.seller_name}</div>
+                      <div className="">{toy.seller_email}</div>
                     </div>
                   </div>
                 </td>
@@ -110,3 +111,7 @@ const AllToys = () => {
 };
 
 export default AllToys;
+
+
+
+
