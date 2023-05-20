@@ -61,7 +61,7 @@ const Header = () => {
             isOpen && "h-screen flex items-center justify-center mt-[-5rem]"
           }`}
         >
-          <div className="md:flex md:items-center space-y-7 md:space-y-0 md:space-x-5">
+          <div className="md:flex md:items-center uppercase space-y-7 md:space-y-0 md:space-x-5">
             {menus.map((menu) => (
               <li key={menu.name} className="text-xl md:my-0 my-7">
                 <NavLink

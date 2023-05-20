@@ -74,7 +74,7 @@ console.log(user);
 
   return (
     <div>
-      <section className="bg-white ">
+      <section className="">
         <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
           <form onSubmit={handleAddToy} className="w-full max-w-md">
             <div className="flex items-center justify-center mt-6">
@@ -204,7 +204,7 @@ console.log(user);
               </div>
 
             <div className="mt-6">
-                <input className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-fuchsia-900 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit" color="secondary" value="Add Toy" />
+                <input className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-fuchsia-300 focus:ring-opacity-50" type="submit"  value="Add Toy" />
              
             </div>
           </form>
