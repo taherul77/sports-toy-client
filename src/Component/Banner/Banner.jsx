@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div className="mt-24">
@@ -33,19 +35,13 @@ const Banner = () => {
             quae. explicabo.
           </p>
           <div className="flex items-center">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-fuchsia-300 focus:ring-opacity-50"
             >
-              Get started
-            </a>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-            >
-              Learn more
-            </a>
+              Shop Now
+            </Link>
+            
           </div>
         </div>
       </div>

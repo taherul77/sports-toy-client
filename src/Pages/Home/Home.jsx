@@ -9,16 +9,18 @@ import SubGallery from "../../Component/SubGallery/SubGallery";
 const Home = () => {
 
   return (
-    <div>
+    <div className="mb-6">
       <div className="mb-6">
         <Banner></Banner>
       </div>
 
+      <div className="py-6">
       <SubGallery></SubGallery>
+      </div>
 
       <div>
         <div>
-          <h2 className="text-2xl font-semibold text-center  capitalize lg:text-3xl py-6 ">
+          <h2 className="text-2xl font-semibold text-center capitalize lg:text-3xl py-6 ">
             OUR TOY Gallery
           </h2>
         </div>
