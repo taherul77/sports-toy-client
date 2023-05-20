@@ -1,7 +1,12 @@
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+
+
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const MyToy = () => {
   const { user } = useContext(AuthContext);
@@ -13,9 +18,31 @@ const MyToy = () => {
       .then((data) => setMyToy(data));
   });
 
+  const handleDelete = id =>{
+
+    const proceed = confirm('Are you sure you want to delete');
+    if(proceed){
+
+fetch(`http://localhost:5000/my-toy/${id}`),{
+    method: 'DELETE'
+}
+.then(res =>res.json())
+.then(data =>{
+    console.log(data);
+    
+})
+
+    }
+
+
+
+
+
+  }
+
   return (
     <div>
-      <h2>mytoy={myToy.length}</h2>
+     
       <div className="overflow-x-auto w-full  bg-gray-300">
         <table className="table w-full">
           {/* head */}
@@ -40,21 +67,31 @@ const MyToy = () => {
                       </div>
                     </div>
                     <div className="m-6">
-                      <div className="">Name</div>
-                      <div className="">Email</div>
+                      <div className="">{toy.seller_name}</div>
+                      <div className="">{toy.seller_email}</div>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <span className="">name</span>
+                  <span className="">{toy.toy_name}</span>
                 </td>
-                <td>category</td>
-                <td>quantity</td>
+                <td>{toy.toy_category}</td>
+                <td>{toy.toy_quantity}</td>
                 <td>
                   <div className="flex items-center gap-5">
-                    <button className="">
+                    
+                  <button className="">
+                      <EditIcon color="secondary"></EditIcon>
+                    </button>
+                  <button onClick={() => handleDelete(toy._id)} className="">
+                      <DeleteIcon color="secondary"></DeleteIcon>
+                    </button>
+                  <Link to={`/single_toy/${toy._id}`}>
+                   <button className="">
                       <VisibilityIcon color="secondary"></VisibilityIcon>
                     </button>
+                   
+                   </Link>
                   </div>
                 </td>
               </tr>

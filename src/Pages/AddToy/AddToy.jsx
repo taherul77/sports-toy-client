@@ -18,10 +18,12 @@ const AddToy = () => {
 
 const {user} = useContext(AuthContext)
 
+console.log(user);
+
 
     const handleAddToy = event =>{
         const form = event.target;
-        const name = user?.name;
+        const name = user?.displayName;
         const email = user?.email;
         const toyName = form.toyName.value;
         const category = form.category.value;
@@ -88,9 +90,10 @@ const {user} = useContext(AuthContext)
                 </span>
 
                 <input
+                readOnly
                   type="text"
                   name="name"
-                  defaultValue={user?.name}
+                  defaultValue={user?.displayName}
                   className="block w-full py-3  bg-white border rounded-lg px-11"
                   placeholder="Username"
                 />
@@ -102,6 +105,7 @@ const {user} = useContext(AuthContext)
                 </span>
 
                 <input
+                readOnly
                   type="email"
                   name="email"
                   defaultValue={user?.email}

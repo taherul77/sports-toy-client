@@ -67,7 +67,11 @@ const Header = () => {
                 <NavLink
                   to={menu.link}
                   onClick={() => setIsOpen(false)}
-                  className="text-dark  font-medium duration-500"
+                  className={({ isActive }) =>
+                  isActive
+                    ? " border-md rounded-md font-medium underline text-xl text-blue-900"
+                    : "font-medium tracking-wide text-gray-950 transition-colors text-xl "
+                }
                 >
                   {menu.name}
                 </NavLink>
@@ -75,6 +79,13 @@ const Header = () => {
             ))}
               {user?.uid ? (
                 <>
+                <li><NavLink aria-label="Add Toy"
+              title="Add Toy"
+              className={({ isActive }) =>
+                isActive
+                  ? " border-md rounded-md font-medium underline text-xl text-blue-900"
+                  : "font-medium tracking-wide text-gray-950 transition-colors text-xl "
+              } to='/my_toy'>My Toy</NavLink></li>
                 <li><NavLink aria-label="Add Toy"
               title="Add Toy"
               className={({ isActive }) =>

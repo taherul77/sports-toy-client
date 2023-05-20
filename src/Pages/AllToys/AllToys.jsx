@@ -1,6 +1,7 @@
 import useTitle from "../../Hooks/useTitle";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
   useTitle("All Toys");
@@ -71,7 +72,7 @@ const AllToys = () => {
                   <div className="flex items-center">
                     <div className="avatar">
                       <div className="max-w-[150px]">
-                        <img src={toy.toy_img} alt="t" />
+                        <img src={toy.toy_img} alt="img" />
                       </div>
                     </div>
                     <div className="m-6">
@@ -87,9 +88,12 @@ const AllToys = () => {
                 <td>{toy.toy_quantity}</td>
                 <td>
                   <div className="flex items-center gap-5">
-                    <button className="">
+                   <Link to={`/single_toy/${toy._id}`}>
+                   <button className="">
                       <VisibilityIcon color="secondary"></VisibilityIcon>
                     </button>
+                   
+                   </Link>
                   </div>
                 </td>
               </tr>
@@ -97,6 +101,10 @@ const AllToys = () => {
           </tbody>
         </table>
       </div>
+
+
+
+    
     </div>
   );
 };

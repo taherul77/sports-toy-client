@@ -1,7 +1,9 @@
 
 import Banner from "../../Component/Banner/Banner";
 import Category from "../../Component/Category/Category";
+import FooterBanner from "../../Component/FooterBanner/FooterBanner";
 import Gallery from "../../Component/Gallery/Gallery";
+import SubGallery from "../../Component/SubGallery/SubGallery";
 
 
 const Home = () => {
@@ -11,6 +13,8 @@ const Home = () => {
       <div className="">
         <Banner></Banner>
       </div>
+
+      <SubGallery></SubGallery>
 
       <div>
         <div>
@@ -28,6 +32,7 @@ const Home = () => {
         <Category></Category>
 
       </div>
+      <FooterBanner></FooterBanner>
     </div>
   );
 };
