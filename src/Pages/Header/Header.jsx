@@ -64,13 +64,13 @@ const Header = () => {
           <div className="md:flex md:items-center space-y-7 md:space-y-0 md:space-x-5">
             {menus.map((menu) => (
               <li key={menu.name} className="text-xl md:my-0 my-7">
-                <Link
+                <NavLink
                   to={menu.link}
                   onClick={() => setIsOpen(false)}
                   className="text-dark  font-medium duration-500"
                 >
                   {menu.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
               {user?.uid ? (
@@ -125,7 +125,7 @@ const Header = () => {
             <li>
               <Link
                 to="/login"
-                className="px-6 py-2 font-bold text-cyan-50 border-md rounded-md  bg-gradient-to-r from-blue-400 to-purple-500"
+                className="px-6 py-2 font-bold text-cyan-50 border-md rounded-md   bg-fuchsia-900  hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
                 aria-label="login"
                 title="login"
               >

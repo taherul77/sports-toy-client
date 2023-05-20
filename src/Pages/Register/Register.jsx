@@ -72,6 +72,7 @@ const Register = () => {
               Name
             </label>
             <input
+            required
               type="name"
               name="name"
               id="name"
@@ -84,12 +85,13 @@ const Register = () => {
               Email address
             </label>
             <input
+            required
               type="email"
               name="email"
               id="email"
               placeholder="example@email.com  "
               className="w-full px-3 py-2 border rounded-md border-gray-700 bg-secondary text-neutral"
-              required
+              
             />
           </div>
           <div>
@@ -99,12 +101,13 @@ const Register = () => {
               </label>
             </div>
             <input
+            required
               type="password"
               name="password"
               id="password"
               placeholder="*****"
               className="w-full px-3 py-2 border rounded-md border-gray-700 bg-secondary text-neutral"
-              required
+              
             />
           </div>
 
@@ -113,6 +116,7 @@ const Register = () => {
               Photo Link
             </label>
             <input
+            required
               type="photo"
               name="photo"
               id="photo"

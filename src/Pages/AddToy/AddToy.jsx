@@ -90,19 +90,21 @@ const {user} = useContext(AuthContext)
                 <input
                   type="text"
                   name="name"
+                  defaultValue={user?.name}
                   className="block w-full py-3  bg-white border rounded-lg px-11"
                   placeholder="Username"
                 />
               </div>
 
               <div className="relative flex items-center mt-6">
-                <span className="absolute">
+                <span className="absolute m-2">
                   <EmailIcon></EmailIcon>
                 </span>
 
                 <input
                   type="email"
                   name="email"
+                  defaultValue={user?.email}
                   className="block w-full py-3  bg-white border rounded-lg px-11"
                   placeholder="Email address"
                 />
@@ -113,6 +115,7 @@ const {user} = useContext(AuthContext)
                 </span>
 
                 <input
+                required
                   type="text"
                   name="toyName"
                   className="block w-full py-3  bg-white border rounded-lg px-11"
@@ -121,11 +124,12 @@ const {user} = useContext(AuthContext)
               </div>
 
               <div className="relative flex items-center mt-4">
-                <span className="absolute">
+                <span className="absolute m-2">
                   <CategoryIcon></CategoryIcon>
                 </span>
 
                 <input
+                required
                   type="text"
                   name="category"
                   className="block w-full px-10 py-3  bg-white border rounded-lg"
@@ -133,11 +137,12 @@ const {user} = useContext(AuthContext)
                 />
               </div>
               <div className="relative flex items-center mt-4">
-                <span className="absolute">
+                <span className="absolute m-2">
                   <ProductionQuantityLimitsIcon></ProductionQuantityLimitsIcon>
                 </span>
 
                 <input
+                required
                   type="text"
                   name="quantity"
                   className="block w-full px-10 py-3  bg-white border rounded-lg"
@@ -145,11 +150,12 @@ const {user} = useContext(AuthContext)
                 />
               </div>
               <div className="relative flex items-center mt-4">
-                <span className="absolute">
-                  <StarBorderIcon></StarBorderIcon>
+                <span className="absolute m-2">
+                  TK
                 </span>
 
                 <input
+                required
                   type="text"
                   name="price"
                   className="block w-full px-10 py-3  bg-white border rounded-lg"
@@ -157,11 +163,12 @@ const {user} = useContext(AuthContext)
                 />
               </div>
               <div className="relative flex items-center mt-4">
-                <span className="absolute">
+                <span className="absolute m-2">
                   <StarBorderIcon></StarBorderIcon>
                 </span>
 
                 <input
+                required
                   type="text"
                   name="rating"
                   className="block w-full px-10 py-3  bg-white border rounded-lg"
@@ -169,10 +176,11 @@ const {user} = useContext(AuthContext)
                 />
               </div>
               <div className="relative flex items-center mt-4">
-              <span className="absolute">
+              <span className="absolute m-2">
               <PhotoIcon></PhotoIcon>
                 </span>
                 <input
+                required
                   type="photo"
                   name="photo"
                   id="photo"
@@ -183,16 +191,16 @@ const {user} = useContext(AuthContext)
              
             </div>
             <div className="relative flex items-center mt-4">
-                <span className="absolute">
+                <span className="absolute m-2">
                   <DetailsIcon></DetailsIcon>
                 </span>
-                <textarea className="block w-full px-10 py-3  bg-white border rounded-lg"  name="description" id="" placeholder="Description" ></textarea>
+                <textarea className="block w-full px-10 py-3  bg-white border rounded-lg"  name="description" required id="" placeholder="Description" ></textarea>
 
                 
               </div>
 
             <div className="mt-6">
-                <input className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit" value="Add Toy" />
+                <input className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-fuchsia-900 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" type="submit" color="secondary" value="Add Toy" />
              
             </div>
           </form>
