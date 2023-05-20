@@ -2,65 +2,70 @@
 import { useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 
-
 const Blog = () => {
-
-    const Item = ({ title, children }) => {
-        const [isOpen, setIsOpen] = useState(false);
-        useTitle("Blog");
-        return (
-          <div className="border rounded shadow-md">
-            <button
-              type="button"
-              aria-label="Open item"
-              title="Open item"
-              className="flex items-center justify-between w-full p-4 focus:outline-none"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <p className="text-lg text-left  font-medium">{title}</p>
-              <div className="flex items-center justify-center w-8 h-8 border rounded-full">
-                <svg
-                  viewBox="0 0 24 24"
-                  className={`w-3  font-black transition-transform duration-200 ${
-                    isOpen ? "transform rotate-180 text-primary" : ""
-                  }`}
-                >
-                  <polyline
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                    strokeMiterlimit="10"
-                    points="2,7 12,17 22,7"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </button>
-            {isOpen && (
-              <div className="p-4 pt-0">
-                <p className=" opacity-80">{children}</p>
-              </div>
-            )}
-          </div>
-        );
-      }
-
-
-
+  const Item = ({ title, children }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    useTitle("Blog");
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="border rounded shadow-md">
+        <button
+          type="button"
+          aria-label="Open item"
+          title="Open item"
+          className="flex items-center justify-between w-full p-4 focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <p className="text-lg text-left  font-medium">{title}</p>
+          <div className="flex items-center justify-center w-8 h-8 border rounded-full">
+            <svg
+              viewBox="0 0 24 24"
+              className={`w-3  font-black transition-transform duration-200 ${
+                isOpen ? "transform rotate-180 text-primary" : ""
+              }`}
+            >
+              <polyline
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="5"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                points="2,7 12,17 22,7"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+        {isOpen && (
+          <div className="p-4 pt-0">
+            <p className=" opacity-80">{children}</p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div className="space-y-4 text-justify">
-        <Item title="What is an access token and refresh token? How do they work and where should we store them on the client-side?">
-            JWT Means (JSON Web Token)? JSON Web Token (JWT) is an open standard
-            (RFC 7519) for securely transmitting information between parties as
-            JSON object.It is compact, readable and digitally signed using a
-            private key/ or a public key pair by the Identity Provider(IdP). So
-            the integrity and authenticity of the token can be verified by other
-            parties involved.The purpose of using JWT is not to hide data but to
-            ensure the authenticity of the data. JWT is signed and encoded, not
-            encrypted.
+          <Item title="What is an access token and refresh token? How do they work and where should we store them on the client-side?">
+            Refresh tokens allow you to balance your users access needs with
+            your organizations security practices. Access tokens help users get
+            the resources they need to complete their tasks, but such tokens can
+            also expose your organization to data compromise or other malicious
+            actions if a hacker is able to steal them.
+            <br />
+            Refresh Tokens are issued to the client by the authorization server
+            upon request of an Access Token. Refresh Token are typically longer
+            lived than Access Tokens and used to request a new Access Token
+            without forcing user authentication.Access tokens are used in
+            token-based authentication to allow an application to access an API.
+            The application receives an access token after a user successfully
+            authenticates and authorizes access, then passes the access token as
+            a credential when it calls the target API. We can store the access
+            token and refresh token in the server-side session. The application
+            can use web sessions to communicate with the server. The token is
+            then available for any requests originating from server-side code.
           </Item>
           <Item title="Compare SQL and NoSQL databases?">
             SQL is the programming language used to interface with relational
@@ -72,7 +77,7 @@ const Blog = () => {
             attendant systems, so comparison can be more useful between multiple
             non-relational technologies vs. SQL generally.
           </Item>
-          
+
           <Item title="What is express js? What is Nest JS?">
             JavaScript is a simple programming language that can be used with
             any browser that has the JavaScript Engine installed. Node.js, on
@@ -99,7 +104,7 @@ const Blog = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Blog;
