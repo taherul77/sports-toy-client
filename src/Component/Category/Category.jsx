@@ -26,13 +26,13 @@ if (!uid) {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://toy-marketplace-server-green.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
 
   const handleCategory = (category) => {
-    fetch(`http://localhost:5000/toys/${category}`)
+    fetch(`https://toy-marketplace-server-green.vercel.app/toys/${category}`)
       .then((res) => res.json())
       .then((data) => setCategoryWiseToy(data));
   };

@@ -12,7 +12,7 @@ const MyToy = () => {
   const [myToy, setMyToy] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toy?seller_email=${user.email}`)
+    fetch(`https://toy-marketplace-server-green.vercel.app/my-toy?seller_email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyToy(data));
   }),[];
@@ -20,7 +20,7 @@ const MyToy = () => {
   const handleDelete = (id) => {
     const proceed = confirm("Are you sure you want to delete");
     if (proceed) {
-      fetch(`http://localhost:5000/delete-toy/${id}`, {
+      fetch(`https://toy-marketplace-server-green.vercel.app/delete-toy/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
