@@ -41,11 +41,8 @@ const SubGallery = () => {
         <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/s5nZFR8/51e-Gqbwh-RCL-removebg-preview.png" alt="" /></SwiperSlide>
         <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/PDQg8gQ/images-2-removebg-preview.png" alt="" /></SwiperSlide>
         <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/gt5Y2P0/85035769-h-removebg-preview.png" alt="" /></SwiperSlide>
-        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="" alt="" /></SwiperSlide>
-        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="" alt="" /></SwiperSlide>
-        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="" alt="" /></SwiperSlide>
-        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="" alt="" /></SwiperSlide>
-        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="" alt="" /></SwiperSlide>
+        <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/FwjPDgx/71-QYu-Sou-Om-L-SX425-removebg-preview.png" alt="" /></SwiperSlide>
+        
        
         
       </Swiper>
