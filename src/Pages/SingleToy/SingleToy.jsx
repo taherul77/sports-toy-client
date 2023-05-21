@@ -11,6 +11,8 @@ const SingleToy = () => {
     toy_rating,
     toy_description,
     toy_category,
+    seller_name,
+    seller_email
   } = data;
 
   console.log(toy_img);
@@ -51,6 +53,14 @@ const SingleToy = () => {
               <p className="my-2 ">
               <b>Rating : </b>
                   {toy_rating}
+                </p>
+                <p className="text-sm ">
+              
+                  {seller_name}
+                </p>
+                <p className="text-sm ">
+              
+                  {seller_email}
                 </p>
             </div>
           </div>

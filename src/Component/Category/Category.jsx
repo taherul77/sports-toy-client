@@ -19,7 +19,7 @@ const Category = () => {
   const handleDetails =(uid)=>{
 
 if (!uid) {
-  toast('You have to log in first to view details')
+  toast.error('You have to log in first to view details')
   
 }
     

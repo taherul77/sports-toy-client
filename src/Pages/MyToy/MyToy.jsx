@@ -15,7 +15,7 @@ const MyToy = () => {
     fetch(`http://localhost:5000/my-toy?seller_email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyToy(data));
-  });
+  }),[];
 
   const handleDelete = (id) => {
     const proceed = confirm("Are you sure you want to delete");
