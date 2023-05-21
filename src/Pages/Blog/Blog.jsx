@@ -68,38 +68,25 @@ const Blog = () => {
             then available for any requests originating from server-side code.
           </Item>
           <Item title="Compare SQL and NoSQL databases?">
-            SQL is the programming language used to interface with relational
-            databases. (Relational databases model data as records in rows and
-            tables with logical links between them). NoSQL is a class of DBMs
-            that are non-relational and generally do not use SQL.Remember that
-            SQL dialects share many properties though they interface with
-            distinct databases. Flavors of NoSQL vary far more across their
-            attendant systems, so comparison can be more useful between multiple
-            non-relational technologies vs. SQL generally.
+            
+The five critical differences between SQL and NoSQL are:
+
+SQL databases are relational, and NoSQL databases are non-relational.
+SQL databases use structured query language (SQL) and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data.
+SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.
+SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores.
+SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON.
           </Item>
 
           <Item title="What is express js? What is Nest JS?">
-            JavaScript is a simple programming language that can be used with
-            any browser that has the JavaScript Engine installed. Node.js, on
-            the other hand, is an interpreter or execution environment for the
-            JavaScript programming language. It requires libraries that can be
-            conveniently accessed from JavaScript programming to be more
-            helpful.Node.js can now operate non-blocking software tasks out of
-            any JavaScript programming. It contains no OS-specific constants.
-            Node.js establishes a strong relationship with the system files,
-            allowing companies to read and write to the hard drive.
+          Both NestJS and Express. js are frameworks, specifically for building backend web applications. A framework is an opinionated set of tools that serves as a basis or a starting point for creating something. In formal terms: a software framework is an abstraction that provides generic functionality.It is built on top of Express, a popular server framework for Node. js, and provides a robust set of features for building efficient, scalable, and enterprise-grade applications.
           </Item>
           <Item title="What is MongoDB aggregate and how does it work?">
-            The entire NodeJS architecture is not single-threaded. NodeJS
-            receives multiple client requests and places them into EventQueue.
-            NodeJS is built with the concept of event-driven architecture.
-            NodeJS has its own EventLoop which is an infinite loop that receives
-            requests and processes them. EventLoop is the listener for the
-            EventQueue. If NodeJS can process the request without I/O blocking
-            then the event loop would itself process the request and sends the
-            response back to the client by itself. But, it is possible to
-            process multiple requests parallelly using the NodeJS cluster module
-            or worker_threads module.
+          MongoDBs aggregate function is a powerful tool used for data aggregation and analysis within the MongoDB database. It allows you to perform advanced queries and transformations on your data, similar to the GROUP BY and JOIN operations in SQL databases.
+          Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.We can use aggregation operations to: Group values from multiple documents together. Perform operations on the grouped data to return a single result. Analyze data changes over time.Extracts data that provides insights. Data collected and data analyzed are two very different processes. ...
+Enables statistical analysis. ...
+Improves marketing. ...
+Improves sales.
           </Item>
         </div>
       </div>

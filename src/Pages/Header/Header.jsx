@@ -6,7 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  
 
   const signOut = () => {
     logOut()
@@ -18,9 +18,7 @@ const Header = () => {
       });
   };
 
-  const handleProfileMenu = () => {
-    setIsProfileMenuOpen(!isProfileMenuOpen);
-  };
+
 
   const refreshPage = () => {
     window.location.reload();
@@ -109,56 +107,56 @@ const Header = () => {
                     Add Toy
                   </NavLink>
                 </li>
-                <div className="col-span-3 hidden lg:block">
-                  <div className="flex items-center justify-end">
-                    <div className="relative">
+                <div className="dropdown dropdown-hover dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle border-2 border-primary avatar ml-2"
+                  >
+                    <div className="w-10 rounded-full">
                       {user?.photoURL ? (
-                        <img
-                          onMouseEnter={() => handleProfileMenu()}
-                          onMouseLeave={() => handleProfileMenu()}
-                          className="h-10 w-10 rounded-full cursor-pointer"
-                          alt=""
-                          src={user.photoURL}
-                        />
+                        <img alt="" src={user.photoURL} />
                       ) : (
                         <img
-                          onMouseEnter={() => handleProfileMenu()}
-                          onMouseLeave={() => handleProfileMenu()}
-                          className="h-8 w-8 rounded-full cursor-pointer"
                           alt=""
                           src="https://i.ibb.co/VvZScTP/blank-avatar.png"
                         />
                       )}
-                      <ul
-                        className={`${
-                          isProfileMenuOpen ? "block" : "hidden"
-                        }  absolute border rounded-md top-10 right-0 w-28 bg-white`}
-                      >
-                        <li className="px-3 h-10 flex items-center justify-center hover:bg-black/[0.03] font-medium text-black">
-                          {user?.displayName}
-                        </li>
-                        <hr />
-                        <li className="px-3 h-10 flex items-center justify-center hover:bg-red-400 rounded-b-md font-medium text-black">
-                          <Link onClick={signOut}>Logout</Link>
-                        </li>
-                      </ul>
                     </div>
-                  </div>
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-compact dropdown-content p-2 shadow bg-base-100 border rounded-md w-52"
+                  >
+                    <li>
+                      <Link>{user?.displayName}</Link>
+                    </li>
+                    <li>
+                      <Link>Profile</Link>
+                    </li>
+                    <li>
+                      <Link onClick={signOut}>Logout</Link>
+                    </li>
+                  </ul>
                 </div>
               </>
             ) : (
+              <>
               <ul className="col-span-3 justify-end items-center hidden space-x-8 lg:flex">
-                <li>
+              <li>
                   <Link
-                    to="/login"
-                    className="px-6 py-2 font-bold text-cyan-50 border-md rounded-md   bg-fuchsia-900  hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
-                    aria-label="login"
-                    title="login"
+                      to="/login"
+                      className="px-6 py-2 font-bold text-cyan-50 border-md rounded-md   bg-fuchsia-900  hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                      aria-label="login"
+                      title="login"
                   >
-                    login
+                      login
                   </Link>
-                </li>
-              </ul>
+              </li>
+          </ul>
+              
+              
+              
+              </>
             )}
           </div>
         </ul>

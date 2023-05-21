@@ -1,7 +1,17 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 const Gallery = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
+
+
   return (
     <div>
-      <section className="py-6 ">
+      <section data-aos="fade-up" className="py-6 ">
         <div className="container flex flex-col justify-center p-4 mx-auto">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
             <img

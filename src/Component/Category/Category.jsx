@@ -1,13 +1,29 @@
-import { useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 
+import { toast } from "react-hot-toast";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
+
 
 const Category = () => {
+
+  const { user } = useContext(AuthContext);
   const [activeCategories, setActiveCategories] = useState("Football");
   const [categories, setCategories] = useState([]);
   const [categoryWiseToy, setCategoryWiseToy] = useState([]);
   const [pageLoaded, setPageLoaded] = useState(false);
+
+
+  const handleDetails =(uid)=>{
+
+if (!uid) {
+  toast('You have to log in first to view details')
+  
+}
+    
+  }
 
   useEffect(() => {
     fetch("http://localhost:5000/categories")
@@ -51,7 +67,7 @@ const Category = () => {
         {categoryWiseToy.map((toy, index) => (
           <div
             key={index}
-            className="col-span-12 lg:col-span-4 rounded-md shadow-md  text-gray-900 border"
+            className="col-span-12 lg:col-span-3 rounded-md shadow-md  text-gray-900 border"
           >
            
               <img
@@ -62,7 +78,7 @@ const Category = () => {
 
             <div className="flex flex-col justify-between p-6 space-y-8">
               <div className="space-y-2">
-                <h2 className="text-xl font-semibold tracking-wide">
+                <h2 className="text-md font-semibold tracking-wide">
                   {toy.toy_name}
                 </h2>
                 <p className="text-gray-900">Price: {toy.toy_price}</p>
@@ -74,7 +90,7 @@ const Category = () => {
 
               <Link to={`/single_toy/${toy._id}`}>
                 
-                <button
+                <button onClick={()=>handleDetails(user?.uid)}
                   type="button"
                   className="flex items-center justify-center w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-400 rounded-lg hover:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-fuchsia-300 focus:ring-opacity-50"
                 >

@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init();
+}, []);
   return (
-    <div className="mt-24">
+    <div data-aos="fade-up" className="mt-24">
       <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
@@ -13,7 +19,7 @@ const Banner = () => {
         >
           <path d="M50 0H100L50 100H0L50 0Z" />
         </svg>
-        <img
+        <img data-aos="fade-up"
           className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
           src="https://i.ibb.co/3dn709p/photo-2023-05-20-23-39-57-removebg-preview.png"
           alt=""

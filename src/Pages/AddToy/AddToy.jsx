@@ -22,6 +22,7 @@ console.log(user);
 
 
     const handleAddToy = event =>{
+      event.preventDefault();
         const form = event.target;
         const name = user?.displayName;
         const email = user?.email;
@@ -77,7 +78,7 @@ console.log(user);
       <section className="">
         <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
           <form onSubmit={handleAddToy} className="w-full max-w-md">
-            <div className="flex items-center justify-center mt-6">
+            <div className="flex items-center justify-center">
               <h1 className="w-1/3 pb-4 font-medium text-center  capitalize border-b-2 border-blue-500  ">
                 Add Toy
               </h1>

@@ -4,6 +4,7 @@ import Category from "../../Component/Category/Category";
 import FooterBanner from "../../Component/FooterBanner/FooterBanner";
 import Gallery from "../../Component/Gallery/Gallery";
 import SubGallery from "../../Component/SubGallery/SubGallery";
+import Contact from "../../Contact/Contact";
 
 
 const Home = () => {
@@ -33,7 +34,13 @@ const Home = () => {
           
         <Category></Category>
 
+       
+
       </div>
+      <div className="py-6">
+      <Contact></Contact>
+      </div>
+     
       <FooterBanner></FooterBanner>
     </div>
   );

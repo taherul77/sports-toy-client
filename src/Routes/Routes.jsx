@@ -12,53 +12,65 @@ import MyToy from "../Pages/MyToy/MyToy";
 import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App></App>,
-    children: [
-      {
+    {
         path: "/",
-        element: <Home></Home>,
-      },
-      {
-        path: "blog",
-        element: <Blog></Blog>,
-      },
-      {
-        path: "all_toys",
-        element: <AllToys></AllToys>,
-      },
-      {
-        path:"add_toy",
-        element:<PrivateRoute><AddToy></AddToy></PrivateRoute>,
-
-      },
-      {
-        path:"my_toy",
-        element:<PrivateRoute><MyToy></MyToy></PrivateRoute>,
-
-      },
-      {
-        path:'single_toy/:id',
-        element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/single-toys/${params.id}`)
-
-      },
-      {
-        path:'my_toy/update_toy/:id',
-        element:<UpdateToy></UpdateToy>,
-        loader: ({params})=> fetch(`http://localhost:5000/update-toy/${params.id}`)
-
-      },
-      {
-        path: "login",
-        element: <Login></Login>,
-      },
-      {
-        path: "register",
-        element: <Register></Register>,
-      },
-    ],
-  },
+        element: <App></App>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>,
+            },
+            {
+                path: "blog",
+                element: <Blog></Blog>,
+            },
+            {
+                path: "all_toys",
+                element: <AllToys></AllToys>,
+            },
+            {
+                path: "add_toy",
+                element: (
+                    <PrivateRoute>
+                        <AddToy></AddToy>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "my_toy",
+                element: (
+                    <PrivateRoute>
+                        <MyToy></MyToy>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "single_toy/:id",
+                element: (
+                    <PrivateRoute>
+                        <SingleToy></SingleToy>
+                    </PrivateRoute>
+                ),
+                loader: ({ params }) =>
+                    fetch(`http://localhost:5000/single-toys/${params.id}`),
+            },
+            {
+                path: "my_toy/update_toy/:id",
+                element: <UpdateToy></UpdateToy>,
+                loader: ({ params }) =>
+                    fetch(
+                        `http://localhost:5000/my-toy/update-toy/${params.id}`
+                    ),
+            },
+            {
+                path: "login",
+                element: <Login></Login>,
+            },
+            {
+                path: "register",
+                element: <Register></Register>,
+            },
+        ],
+    },
 ]);
 export default router;

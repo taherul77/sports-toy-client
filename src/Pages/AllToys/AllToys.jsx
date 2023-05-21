@@ -50,7 +50,7 @@ const AllToys = () => {
           value={searchTerm}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          className="w-full py-2 pl-10 pr-4  border   dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+          className="w-full py-2 pl-10 pr-4  border   dark:border-gray-600 "
         />
       </div>
 
@@ -86,6 +86,12 @@ const AllToys = () => {
                         Sub-category
                       </th>
 
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-sm uppercase font-normal text-left  "
+                      >
+                        price
+                      </th>
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm uppercase font-normal text-left  "
@@ -128,6 +134,9 @@ const AllToys = () => {
                         </td>
                         <td className="px-4 py-4 text-sm  whitespace-nowrap">
                           {toy.toy_category}
+                        </td>
+                        <td className="px-4 py-4 text-sm  whitespace-nowrap">
+                          {toy.toy_price}
                         </td>
                         <td className="px-4 py-4 text-sm  whitespace-nowrap">
                           {toy.toy_quantity}
