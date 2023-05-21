@@ -34,7 +34,7 @@ const Login = () => {
         console.log(user);
         form.reset();
         setError("");
-        navigate(form, { replace: true });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error);

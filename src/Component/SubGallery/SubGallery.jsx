@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./SbuGallery.css";
-import { Pagination } from "swiper";
+import { Autoplay, Parallax} from "swiper";
 
 
 
@@ -14,9 +14,10 @@ const SubGallery = () => {
        <Swiper
         slidesPerView={1}
         spaceBetween={10}
-        pagination={{
-            clickable: true, 
-          }}
+        loop={true}
+        speed={600}
+        parallax={true}
+       
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -31,9 +32,9 @@ const SubGallery = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Parallax,Autoplay]}
         className="mySwiper"
-        autoplay={{ delay: 0 }} 
+        autoplay={{ delay: 3000 }} 
       >
         <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/R780MCw/venson-kinkong-x7-badminton-racket-removebg-preview.png" alt="" /></SwiperSlide>
         <SwiperSlide> <img className="shadow-sm bg-slate-200 rounded-xl" src="https://i.ibb.co/35Xc7Mp/0336463-super-cricket-bat-removebg-preview.png" alt="" /></SwiperSlide>

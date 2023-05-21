@@ -29,11 +29,9 @@ const Banner = () => {
             <br className="hidden ms-8 md:block" />
             Toy
           </h2>
-          <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae. explicabo.
-          </p>
+          <h3 className="pr-5 mb-5 text-6xl uppercase">
+          <span className="text-green-700"> <b>40%</b> </span> off
+          </h3>
           <div className="flex items-center">
             <Link
               to="/"
@@ -52,10 +50,10 @@ const Banner = () => {
             <h2 className="text-center uppercase text-6xl tracking-tighter font-bold">
               Up to 
               <br className="sm:hidden" />
-               <span className="text-cyan-600 ms-2">20% </span>Off
+               <span className="text-cyan-600 ms-2">20% </span>Off  use code : Toy
             </h2>
             <div className="space-x-2 text-center py-2 lg:py-0">
-              <span>Plus free shipping! Use code:</span>
+              <span>For free shipping! Use code:</span>
               <span className="font-bold uppercase text-lg">Sport</span>
             </div>
           

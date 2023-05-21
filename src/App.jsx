@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <div className="max-w-[1480px] mx-auto mt-20">
+      <div className="max-w-[1480px] mx-auto mt-36">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

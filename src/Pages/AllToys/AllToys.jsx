@@ -43,7 +43,7 @@ const AllToys = () => {
   return (
     <div>
 
-      <div className="mt-40 py-6">
+      <div className="mt-40 p-6 py-6">
         <input
           type="text"
           placeholder="Search..."
@@ -54,56 +54,105 @@ const AllToys = () => {
         />
       </div>
 
-      <div className="overflow-x-auto w-full  bg-gray-300">
-        <table className="table w-full">
-         
-          <thead className="bg-gray-500 h-10">
-            <tr>
-              <th>Seller</th>
-              <th>Toy Name</th>
-              <th>Sub-category</th>
-              <th>Available Quantity</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody className=" ">
-            {filteredToys.map((toy, index) => (
-              <tr className="" key={index}>
-                <td>
-                  <div className="flex items-center">
-                    <div className="avatar">
-                      <div className="max-w-[150px]">
-                        <img src={toy.toy_img} alt="img" />
-                      </div>
-                    </div>
-                    <div className="m-6">
-                      <div className="">{toy.seller_name}</div>
-                      <div className="">{toy.seller_email}</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <span className="">{toy.toy_name}</span>
-                </td>
-                <td>{toy.toy_category}</td>
-                <td>{toy.toy_quantity}</td>
-                <td>
-                  <div className="flex items-center gap-5">
-                   <Link to={`/single_toy/${toy._id}`}>
-                   <button className="">
-                      <VisibilityIcon color="secondary"></VisibilityIcon>
-                    </button>
-                   
-                   </Link>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      
 
+      <section className="container px-4 mx-auto">
+        <div className="flex flex-col mt-6">
+          <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+              <div className="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                  <thead className="">
+                    <tr>
+                      <th
+                        scope="col"
+                        className="py-3.5 px-4 text-sm font-normal text-left "
+                      >
+                        <div className="flex items-center uppercase gap-x-3 ms-20 ">
+                          <span>Seller name</span>
+                        </div>
+                      </th>
 
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-sm uppercase font-normal text-left  "
+                      >
+                        Toy Name
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-sm font-normal uppercase text-left  "
+                      >
+                        Sub-category
+                      </th>
+
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-sm uppercase font-normal text-left  "
+                      >
+                        Available Quantity
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-sm uppercase font-normal text-left  "
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className=" divide-y divide-gray-200 dark:divide-gray-700">
+                    {filteredToys.map((toy, index) => (
+                      <tr key={index}>
+                        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                          <div className="inline-flex items-center gap-x-3">
+                            <div className="flex items-center gap-x-2">
+                              <img
+                                className="object-cover w-20  rounded-2xl "
+                                src={toy.toy_img}
+                                alt=""
+                              />
+                              <div>
+                                <h2 className="font-medium ">
+                                  {toy.seller_name}
+                                </h2>
+                                <p className="text-sm font-normal">
+                                  {toy.seller_email}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td className="px-4 py-4 text-sm  whitespace-nowrap">
+                          {toy.toy_name}
+                        </td>
+                        <td className="px-4 py-4 text-sm  whitespace-nowrap">
+                          {toy.toy_category}
+                        </td>
+                        <td className="px-4 py-4 text-sm  whitespace-nowrap">
+                          {toy.toy_quantity}
+                        </td>
+
+                        <td className="px-4 py-4 text-sm whitespace-nowrap">
+                          <div className="flex items-center gap-x-6">
+                          
+                           
+                            <Link to={`/single_toy/${toy._id}`}>
+                              <button className="">
+                                <VisibilityIcon color="secondary"></VisibilityIcon>
+                              </button>
+                            </Link>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     
     </div>
